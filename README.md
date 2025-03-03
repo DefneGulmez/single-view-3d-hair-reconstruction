@@ -1,4 +1,5 @@
 ## Project Pipeline Overview
+**Note:** This implementation was created as part of a project at Sorbonne University.
 
 The following diagram shows the end-to-end pipeline from raw strand-based hair models to 3D reconstruction from images:
 
