@@ -2,9 +2,9 @@
 
 The following diagram shows the end-to-end pipeline from raw strand-based hair models to 3D reconstruction from images:
 
-![Pipeline Overview](pipline.png)
+![Pipeline Overview](pipeline.png)
 
-It is important to node that as the dataset used to train the models is big, it is not included in the submission. However, it can be downloaded from the HairSalon Dataset webside.
+It is important to note that as the dataset used to train the models is big, it is not included in the submission. However, it can be downloaded from the HairSalon Dataset website.
 
 # 📁 VAE3D_Model
 
@@ -106,7 +106,7 @@ Expected Output:
 
 ### 🔍 2. Test Full Inference from Image
 
-Run interface_embedder.py to test the complete pipeline from image → latent vector → 3D volume. Nothe that this could be run in the CNN folder in a terminal.
+Run interface_embedder.py to test the complete pipeline from image → latent vector → 3D volume. Note that this could be run in the CNN folder in a terminal.
 
 ```bash
 python interface_embedder.py
@@ -123,7 +123,7 @@ After getting the reconstructed voxel run:
 
 Expected Output:
 
-- an reconstructed_voxel.npz file inside the CNN folder
+- a reconstructed_voxel.npz file inside the CNN folder
 
 ```bash
 python voxel2strands_data.py
