@@ -1,32 +1,23 @@
-# Python
 __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
 .env
-
-# Data & weights (keep only small samples)
 *.npz
 *.pkl
 *.pth
 *.pt
 *.data
-
-# Allow the small/sample artifacts you want to keep in git
 !example.npz
 !example.png
-!VAE3D_Model/vae3d_epoch200.pth       # OPTIONAL: comment this out if you won't commit weights
-!CNN/reconstructed_voxel.npz          # OPTIONAL: if it's small and needed
-!CNN/reconstructed_voxel.data         # OPTIONAL: if it's small and needed
+!VAE3D_Model/vae3d_epoch200.pth
+!CNN/reconstructed_voxel.npz
+!CNN/reconstructed_voxel.data
 !pipeline.png
-
-# Outputs / logs
 outputs/
 runs/
 logs/
 *.png
 *.pdf
-
-# still allow the pipeline image in root
 !pipeline.png
 !example.png
