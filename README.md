@@ -1,4 +1,4 @@
-## 🧭 Project Pipeline Overview
+## Project Pipeline Overview
 
 The following diagram shows the end-to-end pipeline from raw strand-based hair models to 3D reconstruction from images:
 
@@ -6,11 +6,11 @@ The following diagram shows the end-to-end pipeline from raw strand-based hair m
 
 It is important to note that as the dataset used to train the models is big, it is not included in the submission. However, it can be downloaded from the HairSalon Dataset website.
 
-# 📁 VAE3D_Model
+# VAE3D_Model
 
 This folder contains the implementation of the **3D Volumetric Variational Autoencoder (VAE)** used for learning a latent representation of 3D hair shapes, following the method described in _"3D Hair Synthesis Using Volumetric Variational Autoencoders"_.
 
-## 📄 Files Description
+## Files Description
 
 - `model_vae.py`
   Defines the `VAE3D` class, a 3D convolutional VAE that encodes 4-channel voxel volumes (occupancy + flow) into a compact latent space and decodes them back.
@@ -30,11 +30,11 @@ This folder contains the implementation of the **3D Volumetric Variational Autoe
 - `vae3d_epoch200.pth`
   Contains the trained VAE Model to be used in the above files
 
-# 📁 CNN
+# CNN
 
 This folder contains the implementation of the **image-to-latent CNN embedder** used to project 2D rendered hairstyle images into the latent space of the 3D hair VAE model.This CNN is used to map an image of a hairstyle (black background, white hair) to the latent representation expected by the 3D VAE.
 
-## 📄 Files Description
+## Files Description
 
 - `train_embedder.py`
   Trains the CNN to map rendered hairstyle images to latent vectors, using ground truth pairs from `latent_pairs.pkl`. The training is done on the HairSalon Dataset introduced by the paper`3D Hair Synthesis Using Volumetric Variational Autoencoders` by Saito et al.
@@ -66,9 +66,9 @@ This folder contains the implementation of the **image-to-latent CNN embedder** 
 - `voxel2strands_obj.py`
   Converts voxel predictions into `.obj` file with strand lines (geometry), viewable in Blender or MeshLab.
 
-# 📁 Main Folder(Outside)
+# Main Folder(Outside)
 
-## 📄 Files Description
+## Files Description
 
 - `convert_to_voxel.py`
   Converts .data strand-based 3D hair models (from the HairSalon dataset) into .npz voxel volumes
@@ -76,13 +76,13 @@ This folder contains the implementation of the **image-to-latent CNN embedder** 
 - `generate_latent_pairs.py`
   Encodes each voxel .npz file using the VAE encoder and pairs it with its corresponding rendered image, storing both in a .pkl file for CNN training.
 
-## ✅ TESTING
+## TESTING
 
 To verify that the VAE and CNN embedder are working correctly, run the following test scripts.
 
 ---
 
-### 🔍 1. Test VAE Reconstruction Accuracy
+### 1. Test VAE Reconstruction Accuracy
 
 Run `test_vae_compare.py` to compare the original voxel file(provided as example.npz) with the VAE-reconstructed output. Note that this should be run inside the VAE_Model folder in a terminal.
 
@@ -104,7 +104,7 @@ Expected Output:
 - Original Flow Field (XY)
 - Reconstructed Flow Field
 
-### 🔍 2. Test Full Inference from Image
+### 2. Test Full Inference from Image
 
 Run interface_embedder.py to test the complete pipeline from image → latent vector → 3D volume. Note that this could be run in the CNN folder in a terminal.
 
