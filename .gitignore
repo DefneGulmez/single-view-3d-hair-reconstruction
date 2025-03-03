@@ -29,3 +29,4 @@ logs/
 
 # still allow the pipeline image in root
 !pipeline.png
+!example.png
