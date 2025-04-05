@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "IG3D Project: 3D VAE + Image-to-Latent CNN for Hair Reconstruction"
+authors:
+  - family-names: YourSurname
+    given-names: YourName
+date-released: 2025-04-05
+version: "0.1.0"
+doi: ""
+preferred-citation:
+  type: article
+  title: "3D Hair Synthesis Using Volumetric Variational Autoencoders (reproduction)"
+  authors:
+    - family-names: Saito
+      given-names: Shunsuke
+  year: 2018
